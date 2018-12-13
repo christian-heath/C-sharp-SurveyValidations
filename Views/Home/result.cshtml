@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model dojosurveyvalidations.Models.Survey
+<div class="container">
+        <h3>Thanks for submitting!</h3>
+        <div id="info">
+            <p>Name: @Model.Name</p>
+            <p>Dojo Location: @Model.DojoLocation</p>
+            <p>Favorite Language: @Model.FavoriteLanguage</p>
+            <p>Comment: @Model.Comment</p>
+            <a class='btn btn-secondary' href="/">Go back</a>
+        </div>
+    </div>

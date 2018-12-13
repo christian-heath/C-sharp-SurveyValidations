@@ -1,0 +1,40 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model dojosurveyvalidations.Models.Survey
+<div class="container">
+        <h3>Welcome to this Survey!</h3>
+        <form class='big_form' asp-controller="Home" asp-action="result" method="POST">
+            <div class="form-group">
+                <span asp-validation-for="Name"></span>
+                <label asp-for="Name"></label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" asp-for='Name' value="">
+            </div>
+            <div class="form-group">
+                <label asp-for="DojoLocation"></label>
+                <select class="form-control" id="exampleFormControlSelect1" asp-for="DojoLocation">
+                    <option value="Tulsa">Tulsa</option>
+                    <option value='San_Francisco'>San Francisco</option>
+                    <option value='Dallas'>Dallas</option>
+                    <option value='Chicago'>Chicago</option>
+                    <option value='Seattle'>Seattle</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="FavoriteLanguage"></label>
+                <select class="form-control" id="exampleFormControlSelect1" asp-for="FavoriteLanguage">
+                    <option value='Java'>Java</option>
+                    <option value='Javascript'>Javascript</option>
+                    <option value='Python'>Python</option>
+                    <option value='C#'>C#</option>
+                    <option value='Ruby'>Ruby</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <span asp-validation-for="Comment"></span>
+                <label asp-for="Comment"></label>
+                <textarea asp-for="Comment" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" value='submit' class="btn btn-primary">Submit</button>
+        </form>
+    </div>
